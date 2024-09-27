@@ -2,6 +2,20 @@
 # esp-rs 简介
 esp-rs 是一个专注于为 Espressif 系列芯片（如 ESP32、ESP32-S2、ESP32-C3 等）提供 Rust 语言支持的社区和项目。它的目标是为开发者提供一个高效、安全且易于使用的 Rust 开发环境，以便在 Espressif 芯片上进行嵌入式系统开发。
 
+- 构建工具
+
+| 存储库	| 描述|
+-------- | -----
+| esp-rs/rust	| 带有 Xtensa 支持的 Rust 编译器分支 |
+| esp-rs/rust-build	| Rust 编译器 fork 的预构建二进制文件以及安装脚本 |
+
+- 硬件抽象层
+
+| 存储库 |	描述 |
+-------- | -----
+| esp-rs/esp-idf-hal	| 支持 Rust 标准库（std）|
+| esp-rs/esp-hal	| 不支持 Rust 标准库 ( no_std)|
+
 # Github
 - esp-hal 非标准库：[https://github.com/esp-rs/esp-hal](https://github.com/esp-rs/esp-hal)
 
@@ -27,6 +41,23 @@ rustc --version
 ```
 
 ## esp-rs 环境
+- espup安装
+
+> 用于安装和维护使用 Rust 为 Espressif SoC 开发应用程序所需的工具链的工具。[https://github.com/esp-rs/rust-build](https://github.com/esp-rs/rust-build)
+
+```bash
+cargo install espup
+espup install
+. $HOME/export-esp.sh
+```
+
+- RISC-V 安装
+> 以下指令专门针对基于 RISC-V 架构的 ESP32-C
+
+```bash
+rustup target add riscv32imc-unknown-none-elf
+```
+
 ```bash
 rustup component add rust-src --toolchain nightly
 # 安装 cargo-generate

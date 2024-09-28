@@ -1,4 +1,3 @@
-@[toc]
 # esp-rs 简介
 esp-rs 是一个专注于为 Espressif 系列芯片（如 ESP32、ESP32-S2、ESP32-C3 等）提供 Rust 语言支持的社区和项目。它的目标是为开发者提供一个高效、安全且易于使用的 Rust 开发环境，以便在 Espressif 芯片上进行嵌入式系统开发。
 

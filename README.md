@@ -21,6 +21,9 @@ esp-rs 是一个专注于为 Espressif 系列芯片（如 ESP32、ESP32-S2、ESP
 # Rust 包仓库
 - [https://crates.io/](https://crates.io/)
 
+# Rust 教程
+- [https://rustwiki.org/zh-CN/rust-by-example/index.html](https://rustwiki.org/zh-CN/rust-by-example/index.html)
+
 # Wokwi 电子模拟器
 - [https://wokwi.com/projects/410182337086340097](https://wokwi.com/projects/410182337086340097)
 

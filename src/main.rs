@@ -1,5 +1,6 @@
 #![no_std]
 #![no_main]
+#![allow(dead_code)]
 
 use esp_backtrace as _;
 use esp_hal::{
@@ -87,8 +88,8 @@ fn lcd_write(i2c: &mut I2C<I2C0, Blocking>, data: u8, mode: u8) {
 fn lcd_send_nibble(i2c: &mut I2C<I2C0, Blocking>, nibble: u8) {
     // 发送高4位
     let data = nibble | LCD_BACKLIGHT;
-    i2c.write(I2C_ADDR, &[data | ENABLE]);
-    i2c.write(I2C_ADDR, &[data & !ENABLE]);
+    let _ = i2c.write(I2C_ADDR, &[data | ENABLE]);
+    let _ = i2c.write(I2C_ADDR, &[data & !ENABLE]);
 }
 
 fn lcd_write_string(i2c: &mut I2C<I2C0, Blocking>, s: &str) {

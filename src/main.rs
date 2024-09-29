@@ -4,12 +4,12 @@
 
 use esp_backtrace as _;
 use esp_hal::{
-    clock::ClockControl, 
-    delay::Delay, 
-    peripherals::{Peripherals, I2C0}, 
+    clock::ClockControl,
+    delay::Delay,
+    peripherals::{Peripherals, I2C0},
     Blocking,
-    prelude::*, 
-    system::SystemControl, 
+    prelude::*,
+    system::SystemControl,
     gpio::{Io, Level, Output},
     i2c::I2C
 };

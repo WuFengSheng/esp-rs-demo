@@ -18,4 +18,4 @@ case "$1" in
     ;;
 esac
 
-web-flash --chip esp32c3 target/riscv32imc-unknown-none-elf/${BUILD_MODE}/esp_led
+web-flash --chip esp32c3 target/riscv32imc-unknown-none-elf/${BUILD_MODE}/esp-rs-demo
